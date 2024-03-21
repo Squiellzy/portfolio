@@ -336,7 +336,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   }
 }
 .about {
-  height: 600px;
+  min-height: 600px;
   padding: 50px 0 50px 0;
   background: url('./assets/img/footer-bg.png') no-repeat  ;
 }
@@ -346,6 +346,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 .about .about-text {
   margin-top: 100px;
+  margin-bottom: 50px;
 }
 .about img {
   width: 260px;

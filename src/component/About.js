@@ -21,17 +21,17 @@ export const About = () => {
                     <Col xs={12} lg={12}>
                         <h2>About me</h2>
                     </Col>
-                    <Col xs={7} md={6}>
+                    <Col xs={12} md={6}>
                         <p className="about-text">
                             Hello, <b>I`m Vlad Yudenko, Frontend Developer,</b> who turning code to the incredible sites. I always strive to create a quality product, so I am constantly developing and learning. 
                             <br/><br/>
                             I've been studying Frontend Development since high school, and I am constantly enriching my knowledge on courses and at my university <b>Igor Sikorsky Kyiv Polytechnic Institute</b>.
                         </p>
                     </Col>
-                    <Col xs={4} md={4} lg={{ span: 4, offset: 1 }}>
+                    <Col xs={{ span: 8, offset: 2 }} sm={4} lg={{ span: 4, offset: 1 }}>
                         <img src={me} alt="me"/>
                     </Col>
-                    <Col>
+                    <Col xs={12}>
                     <Marquee>
                         <div className="about-row">
                             React
