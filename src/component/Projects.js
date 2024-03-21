@@ -1,42 +1,46 @@
 import { Col, Container, Tab, Row, Nav } from "react-bootstrap";
 import { ProjectCard } from "./ProjectCard";
-import colorSharp2 from "../assets/img/color-sharp2.png";
-import projImg1 from "../assets/img/project-img1.png";
-import projImg2 from "../assets/img/project-img2.png";
-import projImg3 from "../assets/img/project-img3.png";
 
 
 export const Projects = () => {
-    const projects = [
+    const projectsReact = [
         {
-        title: "Business Startup",
-        description: "Design & Development",
-        imgUrl: projImg1,
+        title: "Game of Thrones",
+        description: "Router, API, Reactstrap",
+        imgUrl: "/img/game-of-throne.png",
+        link:"https://gameofthrones-api.netlify.app"
+        },
+    ]
+    const projectsJS = [
+        {
+        title: "Uklon",
+        description: "Bootstrap, Sass, Gulp",
+        imgUrl: "/img/uklon.png",
+        link:"https://uklon.netlify.app/"
         },
         {
-        title: "Business Startup",
-        description: "Design & Development",
-        imgUrl: projImg2,
+        title: "Food",
+        description: "Modal, Calculator, Timer, Webpack",
+        imgUrl: "/img/food-promo.png",
+        link:"https://food-promo.netlify.app/"
         },
         {
-        title: "Business Startup",
-        description: "Design & Development",
-        imgUrl: projImg3,
+        title: "Parallax",
+        description: "Parallax Effect",
+        imgUrl: "/img/parallax.png",
+        link:"https://parallax-scrolling-helloween.netlify.app/"
         },
         {
-        title: "Business Startup",
-        description: "Design & Development",
-        imgUrl: projImg1,
+        title: "Deer",
+        description: "Login and Registration",
+        imgUrl: "/img/logo-register.png",
+        link:"https://login-registration-deer.netlify.app/"
         },
         {
-        title: "Business Startup",
-        description: "Design & Development",
-        imgUrl: projImg2,
-        },
-        {
-        title: "Business Startup",
-        description: "Design & Development",
-        imgUrl: projImg3,
+        title: "Wordpress",
+        description: "First Project",
+        imgUrl: "/img/wordpress.png",
+        link:"https://wordpress-intensive-online.netlify.app/"
         }
     ];
     return(
@@ -45,26 +49,35 @@ export const Projects = () => {
                 <Row>
                     <Col>
                         <h2>Projects</h2>
-                        <p>Lorem...</p>
+                        <p>Projects I made while learning Frontend and practicing with different instruments</p>
                         <Tab.Container id="projects-tabs" defaultActiveKey="first">
                             <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">
                                 <Nav.Item>
-                                    <Nav.Link eventKey="first">Tab One</Nav.Link>
+                                    <Nav.Link eventKey="first">React</Nav.Link>
                                 </Nav.Item>
                                 <Nav.Item>
-                                    <Nav.Link eventKey="second">Tab Two</Nav.Link>
-                                </Nav.Item>
-                                <Nav.Item>
-                                    <Nav.Link eventKey="third">
-                                    Tab Three
-                                    </Nav.Link>
+                                    <Nav.Link eventKey="second">HTML, CSS, JavaScript</Nav.Link>
                                 </Nav.Item>
                             </Nav>
                             <Tab.Content>
                                 <Tab.Pane eventKey="first">
                                     <Row>
                                         {
-                                            projects.map((project, index) => {
+                                            projectsReact.map((project, index) => {
+                                                return(
+                                                    <ProjectCard
+                                                    key={index}
+                                                    {...project}/>
+                                                )
+                                            })
+                                        }
+                                        <h3>And of course this portfolio site is written with React and many other tools</h3>
+                                    </Row>
+                                </Tab.Pane>
+                                <Tab.Pane eventKey="second">
+                                    <Row>
+                                        {
+                                            projectsJS.map((project, index) => {
                                                 return(
                                                     <ProjectCard
                                                     key={index}
@@ -74,14 +87,11 @@ export const Projects = () => {
                                         }
                                     </Row>
                                 </Tab.Pane>
-                                <Tab.Pane eventKey="second">Lorem</Tab.Pane>
-                                <Tab.Pane eventKey="third">Lorem</Tab.Pane>
                             </Tab.Content>
                         </Tab.Container>
                     </Col>
                 </Row>
             </Container>
-            <img className="background-image-right" src={colorSharp2} alt="background"/>
         </section>
     )
 }

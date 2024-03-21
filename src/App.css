@@ -83,10 +83,10 @@ nav.navbar {
   width: 100%;
   top: 0;
   z-index: 9999;
-  transition:  0.32s ease-in-out;
+  transition:  0.15s ease-in-out;
 }
 nav.navbar.scrolled {
-  padding: 0px 0;
+  padding: 0 0 15px 0;
   background-color: #121212;
 }
 nav.navbar a.navbar-brand {
@@ -109,6 +109,7 @@ span.navbar-text {
     align-items: center;
 }
 .logo {
+  font-size: 28px;
   color: #fff;
   user-select: none;
 }
@@ -142,10 +143,11 @@ span.navbar-text {
     transform: scale(1);
 }
 .social-icon a img {
-	width: 40%;
+	width: 70%;
 	z-index: 1;
 	transition: 0.3s ease-in-out;
 }
+
 .social-icon a:hover img {
 	filter: brightness(0) saturate(100%) invert(0%) sepia(7%) saturate(98%) hue-rotate(346deg) brightness(95%) contrast(86%);
 }
@@ -186,7 +188,7 @@ span.navbar-text {
 nav.navbar .navbar-toggler:active,
 nav.navbar .navbar-toggler:focus {
 	outline: none;
-    box-shadow: none;
+  box-shadow: none;
 }
 nav.navbar .navbar-toggler-icon {
   width: 24px;
@@ -228,12 +230,32 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:before {
 nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 	border-color: transparent;
 }
+/************ Modal Css ************/
+.modal {
+  margin-top: 150px;
+}
+.modal .modal-content {
+  background-color:#121212;
+}
+.modal .modal-content .modal-header {
+  border: none;
+}
+.modal .modal-content .modal-header .btn-close {
+  background-color: #ffffff;
+}
+.modal .modal-content .modal-footer {
+  border: none;
+}
+.navbar-collapse {
+  display: flex;
+}
 
 /************ Banner Css ************/
 .banner {
+  min-height: 515px;
   margin-top: 0;
-  padding: 260px 0 100px 0;
-  background-image: url('./assets/img/banner-bg.png');
+  padding: 200px 0 50px 0;
+  background-image: url('./assets/img/background.jpg');
   background-position: top center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -249,11 +271,12 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   display: inline-block;
 }
 .banner h1 {
-  font-size: 65px;
+  height: 180px;
+  font-size: 75px;
   font-weight: 700;
   letter-spacing: 0.8px;
   line-height: 1;
-  margin-bottom: 20px;
+  /* margin-bottom: 20px; */
   display: block;
 }
 .banner p {
@@ -298,6 +321,54 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .txt-rotate > .wrap {
   border-right: 0.08em solid #666;
 }
+/************ About Css ************/
+.fadeIn {
+  animation: fadeIn 1.5s ease-in-out;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.about {
+  height: 600px;
+  padding: 50px 0 50px 0;
+  background: url('./assets/img/footer-bg.png') no-repeat  ;
+}
+.about h2 {
+  font-size: 45px;
+  text-align: center;
+}
+.about .about-text {
+  margin-top: 100px;
+}
+.about img {
+  width: 260px;
+  order: 1;
+  animation: about__animate 8s ease-in-out infinite;
+}
+@keyframes about__animate {
+  0% {
+    border-radius: 30% 60% 70% 40%/50% 60% 30% 60%;
+  }
+  50% {
+    border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+  }
+  100% {
+    border-radius: 30% 60% 70% 40%/50% 60% 30% 60%;
+  }
+}
+.about .about-row {
+  font-size: 18px;
+  height: 40px;
+  word-spacing: 24px;
+  margin-top: 20px;
+}
 /************ Skills Css ************/
 .skill {
   padding: 0 0 50px 0;
@@ -341,7 +412,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .project {
   padding: 80px 0;
   position: relative;
-  background-color: black;
+  background-color: #130820;
 }
 .project h2 {
 	font-size: 45px;
@@ -355,7 +426,11 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   line-height: 1.5em;
   margin: 14px auto 30px auto;
   text-align: center;
-  width: 56%;
+  width: 58%;
+}
+.project h3 {
+  text-align: center;
+  margin-top: 10px;
 }
 .project .nav.nav-pills {
   width: 72%;
@@ -365,7 +440,8 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   overflow: hidden;
 }
 .project .nav.nav-pills .nav-item {
-  width: 33.33333%;
+  width: 50%;
+  height: 58px;
 }
 .project .nav.nav-pills .nav-link {
   background-color: transparent;
@@ -373,7 +449,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   padding: 17px 0;
   color: #fff;
   width: 100%;
-  font-size: 17px;
+  font-size: 15px;
   letter-spacing: 0.8px;
   font-weight: 500;
   position: relative;
@@ -403,10 +479,6 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   border-radius: 55px 0px 0px 55px;
 }
 .nav-link#projects-tabs-tab-second {
-  border-top: 1px solid rgba(255, 255, 255, 0.5);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
-}
-.nav-link#projects-tabs-tab-third {
   border: 1px solid rgba(255, 255, 255, 0.5);
   border-radius: 0 55px 55px 0;
 }
@@ -431,6 +503,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .proj-txtx {
   position: absolute;
   text-align: center;
+  color: #ffffff;
   top: 65%;
   left: 50%;
   transform: translate(-50%, -50%);
