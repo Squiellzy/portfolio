@@ -10,6 +10,12 @@ export const Projects = () => {
         imgUrl: "/img/game-of-throne.png",
         link:"https://gameofthrones-api.netlify.app"
         },
+        {
+        title: "Hoobank",
+        description: "Tailwind CSS, Vite",
+        imgUrl: "/img/hoobank.png",
+        link:"https://hoobank-credit.netlify.app/"
+        },
     ]
     const projectsJS = [
         {

@@ -26,11 +26,11 @@ export const NavMenu = () => {
     }
 
     const handleShow = () => {
-        setShow(true); // При кліку на кнопку відображаємо модальне вікно
+        setShow(true); 
     }
 
     const handleClose = () => {
-        setShow(false); // При закритті модального вікна ховаємо його
+        setShow(false);
     }
 
     return ( 
