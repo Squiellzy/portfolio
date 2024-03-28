@@ -370,6 +370,9 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   word-spacing: 24px;
   margin-top: 20px;
 }
+.about .about-row:last-child {
+  margin-right: 24px;
+}
 /************ Skills Css ************/
 .skill {
   padding: 0 0 50px 0;

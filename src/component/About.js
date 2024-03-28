@@ -44,6 +44,8 @@ export const About = () => {
                             Ajax
                             HTML
                             Less
+                            Tailwind
+                            SQL
                             Bootstrap
                             Git
                             Redux
